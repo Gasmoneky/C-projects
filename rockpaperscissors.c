@@ -30,22 +30,33 @@ printf("-----------------------------------------\n");
 printf("ROCK PAPER SCISSORS GAME MADE BY RYAN\n");
 printf("-----------------------------------------\n");
 
+
 printf("Please pick a number that you would like to play with:\n");
 printf("1.ROCK\n");
 printf("2.PAPER\n");
 printf("3.SCISSORS\n");
 printf("Enter Your Choice:");
 
+
 scanf("%d",&personChoice);
+if (personChoice <1 || personChoice>3){
+    printf("invalid input program closing");
+    
+}
+
+   else{ 
 int personReturn = personsChoice(personChoice);
 int computerReturn = machineChoice(randomNumber);
 int theWinner = winner(personChoice,computerReturn);
 
+   
+
+}
     return 0;
+
 }
 
-
-int personsChoice(int personChoice) {
+int personsChoice(int personChoice){
 switch(personChoice){
 case 1:
 printf("YOU HAVE CHOSEN ROCK\n");
